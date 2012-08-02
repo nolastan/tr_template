@@ -26,9 +26,8 @@ class TasksController < ApplicationController
   # POST /tasks.json
   def create
     @task = Task.new(params[:task])
-    tr = Taskrabbit::Api.new(current_user.token)
 
-    remote_task = tr.tasks.create({
+    remote_task = current_user.api_session.tasks.new({
       :name => @task.name,
       :named_price =>  @task.named_price, 
       :city_id =>  @task.city_id,
@@ -39,11 +38,15 @@ class TasksController < ApplicationController
       :assignment_type =>  @task.assignment_type
     })
 
-    @task.remote_id = remote_task.id
-    @task.remote_path = remote_task.links["get"]
-    @task.state = remote_task.state
-
-    flash[:error] = remote_task.error
+    if remote_task.save 
+      @task.remote_id = remote_task.id
+      debugger
+      @task.remote_path = remote_task.links["get"]
+      @task.state = remote_task.state
+      @task.save
+    else
+      flash[:error] = remote_task.error
+    end
   end
 
   # PUT /tasks/1
