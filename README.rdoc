@@ -1,0 +1,5 @@
+== TaskRabbit API Template
+The purpose of this app is to demonstrate how to use the TaskRabbit API.
+
+= Setup
+* Create an app with callback url `/user/login`

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TrTemplate</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+  <% if @current_user %>
+    Hiya, <%= @current_user.display_name %>!
+  <% else %>
+    <%= link_to 'Login with TaskRabbit', "#{TASKRABBIT['uri']}/api/authorize?client_id=#{TASKRABBIT['key']}" %>
+  <% end %>
+</header>
+<%= yield %>
+
+</body>
+</html>

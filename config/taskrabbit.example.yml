@@ -1,0 +1,11 @@
+# Find your app's key and secret at http://taskrabbit.com/developers
+
+# SANDBOX
+key: 
+secret: 
+uri: http://taskrabbitdev.com
+
+# PRODUCTION
+key: 
+secret: 
+uri: http://taskrabbit.com
