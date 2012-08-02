@@ -38,11 +38,10 @@ class TasksController < ApplicationController
       :assignment_type =>  @task.assignment_type
     })
 
-    if remote_task.save 
-      @task.remote_id = remote_task.id
-      debugger
+    if remote_task.save
+      @task.remote_id   = remote_task.id
       @task.remote_path = remote_task.links["get"]
-      @task.state = remote_task.state
+      @task.state       = remote_task.state
       @task.save
     else
       flash[:error] = remote_task.error
