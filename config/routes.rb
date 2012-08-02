@@ -1,7 +1,9 @@
 TrTemplate::Application.routes.draw do
   resources :tasks
 
-  match '/auth/:provider/callback', to: 'users#login'
+  match '/auth/:provider/callback', to: 'sessions#create'
+  match "/logout", :to => "sessions#destroy"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
