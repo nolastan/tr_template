@@ -1,0 +1,61 @@
+<%= form_for(@task) do |f| %>
+  <% if @task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+      <% @task.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :named_price %><br />
+    <%= f.number_field :named_price %>
+  </div>
+  <div class="field">
+    <%= f.label :city_id %><br />
+    <%= f.number_field :city_id %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :private_description %><br />
+    <%= f.text_area :private_description %>
+  </div>
+  <div class="field">
+    <%= f.label :cost_in_cents %><br />
+    <%= f.number_field :cost_in_cents %>
+  </div>
+  <div class="field">
+    <%= f.label :virtual %><br />
+    <%= f.check_box :virtual %>
+  </div>
+  <div class="field">
+    <%= f.label :assignment_type %><br />
+    <%= f.text_field :assignment_type %>
+  </div>
+  <div class="field">
+    <%= f.label :number_runners_to_fill %><br />
+    <%= f.number_field :number_runners_to_fill %>
+  </div>
+  <div class="field">
+    <%= f.label :complete_by_time %><br />
+    <%= f.datetime_select :complete_by_time %>
+  </div>
+  <div class="field">
+    <%= f.label :assign_by_time %><br />
+    <%= f.datetime_select :assign_by_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

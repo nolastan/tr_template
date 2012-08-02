@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @task.name %>
+</p>
+
+<p>
+  <b>Named price:</b>
+  <%= @task.named_price %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @task.city_id %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @task.description %>
+</p>
+
+<p>
+  <b>Private description:</b>
+  <%= @task.private_description %>
+</p>
+
+<p>
+  <b>Cost in cents:</b>
+  <%= @task.cost_in_cents %>
+</p>
+
+<p>
+  <b>Virtual:</b>
+  <%= @task.virtual %>
+</p>
+
+<p>
+  <b>Assignment Type:</b>
+  <%= @task.assignment_type %>
+</p>
+
+<p>
+  <b>Number runners to fill:</b>
+  <%= @task.number_runners_to_fill %>
+</p>
+
+<p>
+  <b>Complete by time:</b>
+  <%= @task.complete_by_time %>
+</p>
+
+<p>
+  <b>Assign by time:</b>
+  <%= @task.assign_by_time %>
+</p>
+
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>

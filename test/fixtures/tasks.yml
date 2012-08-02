@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  named_price: 1
+  city_id: 1
+  description: MyText
+  private_description: MyText
+  cost_in_cents: 1
+  virtual: false
+  assignment: 
+  number_runners_to_fill: 1
+  complete_by_time: 2012-08-01 18:43:55
+  assign_by_time: 2012-08-01 18:43:55
+
+two:
+  name: MyString
+  named_price: 1
+  city_id: 1
+  description: MyText
+  private_description: MyText
+  cost_in_cents: 1
+  virtual: false
+  assignment: 
+  number_runners_to_fill: 1
+  complete_by_time: 2012-08-01 18:43:55
+  assign_by_time: 2012-08-01 18:43:55

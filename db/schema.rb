@@ -11,7 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120802005039) do
+ActiveRecord::Schema.define(:version => 20120802015153) do
+
+  create_table "tasks", :force => true do |t|
+    t.string   "name"
+    t.integer  "named_price"
+    t.integer  "city_id"
+    t.text     "description"
+    t.text     "private_description"
+    t.integer  "cost_in_cents"
+    t.boolean  "virtual"
+    t.string   "assignment_type"
+    t.integer  "number_runners_to_fill"
+    t.datetime "complete_by_time"
+    t.datetime "assign_by_time"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
+    t.integer  "remote_id"
+    t.string   "remote_path"
+    t.string   "state"
+  end
 
   create_table "users", :force => true do |t|
     t.integer  "remote_id"

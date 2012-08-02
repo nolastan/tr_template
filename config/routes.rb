@@ -1,4 +1,6 @@
 TrTemplate::Application.routes.draw do
+  resources :tasks
+
   match '/auth/:provider/callback', to: 'users#login'
 
   # The priority is based upon order of creation:
