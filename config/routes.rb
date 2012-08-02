@@ -1,5 +1,5 @@
 TrTemplate::Application.routes.draw do
-  match 'users/login' => 'users#login'
+  match '/auth/:provider/callback', to: 'users#login'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

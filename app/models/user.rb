@@ -2,16 +2,12 @@ require 'open-uri'
 require 'json'
 
 class User < ActiveRecord::Base
-  attr_accessible :display_name, :remote_id, :token
   has_many :orders
 
-  def self.fetch_user_details(access_token)
-    url = [
-      Taskrabbit.base_uri,
-      Taskrabbit.endpoint,
-      "account?access_token=#{access_token}"
-    ].join('/')
-
-    JSON.parse(open(url).read)
+  def self.find_or_create_from_auth_hash(auth_hash)
+    user              = find_or_initialize_by_remote_id(auth_hash.uid)
+    user.display_name = auth_hash.extra.raw_info.display_name
+    user.save
+    user
   end
 end

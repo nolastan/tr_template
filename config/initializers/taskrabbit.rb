@@ -6,6 +6,8 @@ Taskrabbit.configure do |config|
   config.base_uri      = ENV['TASKRABBIT_URI'] || TASKRABBIT['uri']
 end
 
+extra_options = { :client_options => { :site => ENV['TASKRABBIT_URI'] || TASKRABBIT['uri'] } }
+
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :taskrabbit, ENV['TASKRABBIT_KEY'] || TASKRABBIT['key'], ENV['TASKRABBIT_SECRET'] || TASKRABBIT['secret']
+  provider :taskrabbit, ENV['TASKRABBIT_KEY'] || TASKRABBIT['key'], ENV['TASKRABBIT_SECRET'] || TASKRABBIT['secret'], extra_options
 end

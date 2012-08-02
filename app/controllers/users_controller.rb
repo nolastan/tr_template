@@ -2,21 +2,11 @@ class UsersController < ApplicationController
 
   # callback from Taskrabbit OAuth
   def login
-    # fetch user account info from TaskRabbit API
-    remote_info = User.fetch_user_details(params[:access_token])
+    @user         = User.find_or_create_from_auth_hash(auth_hash)
+    @user_name    = @user.display_name
 
-    # set up the user if not already present
-    user = User.find_or_initialize_by_remote_id(remote_info['id'])
+    session[:current_user_id] = @user.id
 
-    # ensure their info is fresh
-    user.token = params[:access_token]
-    user.display_name = remote_info['display_name']
-    user.save!
-
-    # lay down their cookie and save their username for the view
-    session[:current_user_id] = user.id
-    @user_name = user.display_name
-    
     redirect_to :back
   end
 
@@ -24,5 +14,11 @@ class UsersController < ApplicationController
     @current_user = nil
     session[:current_user_id] = nil
     redirect_to :root
+  end
+
+  protected
+
+  def auth_hash
+    request.env['omniauth.auth']
   end
 end
