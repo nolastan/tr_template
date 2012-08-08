@@ -26,6 +26,7 @@ class TasksController < ApplicationController
   # POST /tasks.json
   def create
     @task = Task.new(params[:task])
+    render action: "new" and return if !@task.save
 
     remote_task = current_user.api_session.tasks.new({
       :name => @task.name,
@@ -38,14 +39,17 @@ class TasksController < ApplicationController
       :assignment_type =>  @task.assignment_type
     })
 
-    if remote_task.save
+    # @TODO: better error handling
+    if remote_task.save and remote_task.id
       @task.remote_id   = remote_task.id
       @task.remote_path = remote_task.links["get"]
       @task.state       = remote_task.state
       @task.save
     else
-      flash[:error] = remote_task.error
+      flash[:error] = remote_task.error || "Error posting to TaskRabbit."
     end
+
+    redirect_to @task
   end
 
   # PUT /tasks/1
