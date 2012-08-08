@@ -1,4 +1,4 @@
-== TaskRabbit API Template
+== TaskRabbit API Boilerplate
 The purpose of this app is to demonstrate how to use the TaskRabbit API.
 
 = Setup

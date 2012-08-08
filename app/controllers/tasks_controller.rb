@@ -1,4 +1,7 @@
 class TasksController < ApplicationController
+  before_filter :require_logged_in, :only => [:new, :create, :edit]
+  before_filter :require_current_user, :only => :edit
+
   # GET /tasks
   # GET /tasks.json
   def index
@@ -63,5 +66,17 @@ class TasksController < ApplicationController
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
+  end
+
+  private
+
+  def require_logged_in
+    if current_user.nil?
+      redirect_to :root
+    end
+  end
+
+  def require_current_user #@TODO add user id
+    current_user.id == user_id
   end
 end
