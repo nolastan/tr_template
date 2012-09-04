@@ -33,6 +33,7 @@ group :test do
   gem 'fakeweb'
   gem 'capybara-mechanize'
   gem 'launchy'
+  gem 'guard-rspec'
 end
 
 gem 'jquery-rails'
