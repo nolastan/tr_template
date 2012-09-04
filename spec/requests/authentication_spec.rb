@@ -6,7 +6,7 @@ describe "Authentication" do
     visit root_path
   end
 
-  it "login a new user", :vcr do
+  it "should login a new user", :vcr do
     click_on "Login"
 
     fill_in "user_first_and_last_name", :with => "Roger Rabbit"
@@ -28,7 +28,7 @@ describe "Authentication" do
     page.should have_content "Roger R."
   end
 
-  it "login existing user", :vcr do
+  it "should login existing user", :vcr do
     click_on "Login"
     find(:css, "#switch-login a").click
     fill_in "user_session_email", :with => "roger@example.com"
@@ -39,7 +39,7 @@ describe "Authentication" do
     page.should have_content "Roger R."
   end
 
-  it "logout user", :vcr do
+  it "should logout user", :vcr do
     # @TODO: fake login user
     click_on "Login"
     find(:css, "#switch-login a").click
