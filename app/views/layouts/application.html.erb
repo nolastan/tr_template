@@ -9,7 +9,7 @@
 <body>
 <header>
   <% if @current_user %>
-    Hiya, <%= @current_user.display_name %>!
+    Logged in as <%= @current_user.display_name %> (<%= link_to 'Logout', logout_path %>)
   <% else %>
     <%= link_to 'Login with TaskRabbit', "auth/taskrabbit" %>
   <% end %>
