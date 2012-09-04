@@ -23,9 +23,6 @@ describe TasksController do
       post :create
       response.code.should == '200'
     end
-
-    it "should "
-
   end
 
 end
