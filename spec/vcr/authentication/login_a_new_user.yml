@@ -1,0 +1,576 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://taskrabbitdev.com/api/authorize?response_type=code&client_id=Wv6xtnl1qzHiYxMUhOXEs48D7Y0zeiBGSKkF5Q99&redirect_uri=http%3A%2F%2Fwww.example.com%2Fauth%2Ftaskrabbit%2Fcallback
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.2 (KHTML, like
+        Gecko) Chrome/15.0.853.0 Safari/535.2
+      accept-encoding:
+      - gzip,deflate,identity
+      accept-charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      accept-language:
+      - en-us,en;q=0.5
+      host:
+      - taskrabbitdev.com
+      connection:
+      - keep-alive
+      keep-alive:
+      - 300
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      server:
+      - nginx/1.0.11
+      date:
+      - Tue, 04 Sep 2012 06:10:53 GMT
+      content-type:
+      - text/html; charset=utf-8
+      connection:
+      - keep-alive
+      status:
+      - 302 Found
+      x-runtime:
+      - '358'
+      content-length:
+      - '258'
+      set-cookie:
+      - user_credentials=; path=/; expires=Thu, 01-Jan-1970 00:00:00 GMT
+      - _remy.refactor_session=BAh7CDoPc2Vzc2lvbl9pZCIlNmJiNTg1OWRhOWMwODllMmFkNWU3MzI1NWYzZDNmMDY6DnJldHVybl90byIBnS9hcGkvYXV0aG9yaXplP3Jlc3BvbnNlX3R5cGU9Y29kZSZjbGllbnRfaWQ9V3Y2eHRubDFxekhpWXhNVWhPWEVzNDhEN1kwemVpQkdTS2tGNVE5OSZyZWRpcmVjdF91cmk9aHR0cCUzQSUyRiUyRnd3dy5leGFtcGxlLmNvbSUyRmF1dGglMkZ0YXNrcmFiYml0JTJGY2FsbGJhY2s6FHJldHVybl90b19jb3VudEY%3D--966e2e977211638b4dd3df0fbda5dc49748aa1e5;
+        path=/; HttpOnly
+      location:
+      - http://taskrabbitdev.com/api/authenticate?client_id=Wv6xtnl1qzHiYxMUhOXEs48D7Y0zeiBGSKkF5Q99&redirect_uri=http%3A%2F%2Fwww.example.com%2Fauth%2Ftaskrabbit%2Fcallback&response_type=code
+      cache-control:
+      - no-cache
+    body:
+      encoding: US-ASCII
+      string: <html><body>You are being <a href="http://taskrabbitdev.com/api/authenticate?client_id=Wv6xtnl1qzHiYxMUhOXEs48D7Y0zeiBGSKkF5Q99&amp;redirect_uri=http%3A%2F%2Fwww.example.com%2Fauth%2Ftaskrabbit%2Fcallback&amp;response_type=code">redirected</a>.</body></html>
+    http_version: '1.1'
+  recorded_at: Tue, 04 Sep 2012 06:10:53 GMT
+- request:
+    method: get
+    uri: http://taskrabbitdev.com/api/authenticate?client_id=Wv6xtnl1qzHiYxMUhOXEs48D7Y0zeiBGSKkF5Q99&redirect_uri=http%3A%2F%2Fwww.example.com%2Fauth%2Ftaskrabbit%2Fcallback&response_type=code
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.2 (KHTML, like
+        Gecko) Chrome/15.0.853.0 Safari/535.2
+      accept-encoding:
+      - gzip,deflate,identity
+      accept-charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      accept-language:
+      - en-us,en;q=0.5
+      cookie:
+      - _remy.refactor_session=BAh7CDoPc2Vzc2lvbl9pZCIlNmJiNTg1OWRhOWMwODllMmFkNWU3MzI1NWYzZDNmMDY6DnJldHVybl90byIBnS9hcGkvYXV0aG9yaXplP3Jlc3BvbnNlX3R5cGU9Y29kZSZjbGllbnRfaWQ9V3Y2eHRubDFxekhpWXhNVWhPWEVzNDhEN1kwemVpQkdTS2tGNVE5OSZyZWRpcmVjdF91cmk9aHR0cCUzQSUyRiUyRnd3dy5leGFtcGxlLmNvbSUyRmF1dGglMkZ0YXNrcmFiYml0JTJGY2FsbGJhY2s6FHJldHVybl90b19jb3VudEY%3D--966e2e977211638b4dd3df0fbda5dc49748aa1e5
+      host:
+      - taskrabbitdev.com
+      connection:
+      - keep-alive
+      keep-alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.11
+      date:
+      - Tue, 04 Sep 2012 06:10:54 GMT
+      content-type:
+      - text/html; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      status:
+      - 200 OK
+      etag:
+      - ! '"132d5c82065e264e6452fc628b7a5f0f"'
+      x-runtime:
+      - '424'
+      set-cookie:
+      - user_credentials=; path=/; expires=Thu, 01-Jan-1970 00:00:00 GMT
+      - _remy.refactor_session=BAh7CToPc2Vzc2lvbl9pZCIlNmJiNTg1OWRhOWMwODllMmFkNWU3MzI1NWYzZDNmMDY6DnJldHVybl90byIBnS9hcGkvYXV0aG9yaXplP3Jlc3BvbnNlX3R5cGU9Y29kZSZjbGllbnRfaWQ9V3Y2eHRubDFxekhpWXhNVWhPWEVzNDhEN1kwemVpQkdTS2tGNVE5OSZyZWRpcmVjdF91cmk9aHR0cCUzQSUyRiUyRnd3dy5leGFtcGxlLmNvbSUyRmF1dGglMkZ0YXNrcmFiYml0JTJGY2FsbGJhY2s6EF9jc3JmX3Rva2VuIjEyeE1KdjNydzB5WHFLTXNBMmhUSXBhTkpWZGhPWFNNNW5BOWc1M1FSUlVrPToUcmV0dXJuX3RvX2NvdW50VA%3D%3D--8cb11ba6a8031874ef661da4f7cc8f48ac97a18f;
+        path=/; HttpOnly
+      cache-control:
+      - private, max-age=0, must-revalidate
+      content-encoding:
+      - gzip
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+    http_version: '1.1'
+  recorded_at: Tue, 04 Sep 2012 06:10:54 GMT
+- request:
+    method: post
+    uri: http://taskrabbitdev.com/api/oauth/users?client_id=Wv6xtnl1qzHiYxMUhOXEs48D7Y0zeiBGSKkF5Q99&redirect_uri=http%3A%2F%2Fwww.example.com%2Fauth%2Ftaskrabbit%2Fcallback&response_type=code
+    body:
+      encoding: UTF-8
+      string: user%5Bmobile_phone%5D=012-345-6789&user%5Bzip_code%5D=12345&commit=Sign+Up+%26+Authorize&user%5Bterms_of_use%5D=true&authenticity_token=2xMJv3rw0yXqKMsA2hTIpaNJVdhOXSM5nA9g53QRRUk%3D&user%5Bfirst_and_last_name%5D=Roger+Rabbit&user%5Bemail%5D=roger%40example.com&authorize=1&user%5Bpassword%5D=secret
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.2 (KHTML, like
+        Gecko) Chrome/15.0.853.0 Safari/535.2
+      accept-encoding:
+      - gzip,deflate,identity
+      accept-charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      accept-language:
+      - en-us,en;q=0.5
+      cookie:
+      - _remy.refactor_session=BAh7CToPc2Vzc2lvbl9pZCIlNmJiNTg1OWRhOWMwODllMmFkNWU3MzI1NWYzZDNmMDY6DnJldHVybl90byIBnS9hcGkvYXV0aG9yaXplP3Jlc3BvbnNlX3R5cGU9Y29kZSZjbGllbnRfaWQ9V3Y2eHRubDFxekhpWXhNVWhPWEVzNDhEN1kwemVpQkdTS2tGNVE5OSZyZWRpcmVjdF91cmk9aHR0cCUzQSUyRiUyRnd3dy5leGFtcGxlLmNvbSUyRmF1dGglMkZ0YXNrcmFiYml0JTJGY2FsbGJhY2s6EF9jc3JmX3Rva2VuIjEyeE1KdjNydzB5WHFLTXNBMmhUSXBhTkpWZGhPWFNNNW5BOWc1M1FSUlVrPToUcmV0dXJuX3RvX2NvdW50VA%3D%3D--8cb11ba6a8031874ef661da4f7cc8f48ac97a18f
+      host:
+      - taskrabbitdev.com
+      referer:
+      - !ruby/object:URI::HTTP
+        scheme: http
+        user: 
+        password: 
+        host: taskrabbitdev.com
+        port: 80
+        path: /api/authenticate
+        query: client_id=Wv6xtnl1qzHiYxMUhOXEs48D7Y0zeiBGSKkF5Q99&redirect_uri=http%3A%2F%2Fwww.example.com%2Fauth%2Ftaskrabbit%2Fcallback&response_type=code
+        opaque: 
+        registry: 
+        fragment: 
+        parser: 
+      content-type:
+      - application/x-www-form-urlencoded
+      content-length:
+      - '300'
+      connection:
+      - keep-alive
+      keep-alive:
+      - 300
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      server:
+      - nginx/1.0.11
+      date:
+      - Tue, 04 Sep 2012 06:10:55 GMT
+      content-type:
+      - text/html; charset=utf-8
+      connection:
+      - keep-alive
+      status:
+      - 302 Found
+      x-runtime:
+      - '553'
+      content-length:
+      - '269'
+      set-cookie:
+      - user_credentials=; path=/; expires=Thu, 01-Jan-1970 00:00:00 GMT
+      - user_credentials=89dc10f71d88343ae5d910095cf3f7a2560659f8bc9bb63bcd51dbbca766872a4602bb6a8eb5286ad63bc18eb78a744430f54e37fd29c38ad6996bcf6aa51aee%3A%3A30;
+        path=/
+      - _remy.refactor_session=BAh7CyIVdXNlcl9jcmVkZW50aWFscyIBgDg5ZGMxMGY3MWQ4ODM0M2FlNWQ5MTAwOTVjZjNmN2EyNTYwNjU5ZjhiYzliYjYzYmNkNTFkYmJjYTc2Njg3MmE0NjAyYmI2YThlYjUyODZhZDYzYmMxOGViNzhhNzQ0NDMwZjU0ZTM3ZmQyOWMzOGFkNjk5NmJjZjZhYTUxYWVlIhh1c2VyX2NyZWRlbnRpYWxzX2lkaSM6D3Nlc3Npb25faWQiJTZiYjU4NTlkYTljMDg5ZTJhZDVlNzMyNTVmM2QzZjA2OhBfY3NyZl90b2tlbiIxMnhNSnYzcncweVhxS01zQTJoVElwYU5KVmRoT1hTTTVuQTlnNTNRUlJVaz06DnJldHVybl90byIBnS9hcGkvYXV0aG9yaXplP3Jlc3BvbnNlX3R5cGU9Y29kZSZjbGllbnRfaWQ9V3Y2eHRubDFxekhpWXhNVWhPWEVzNDhEN1kwemVpQkdTS2tGNVE5OSZyZWRpcmVjdF91cmk9aHR0cCUzQSUyRiUyRnd3dy5leGFtcGxlLmNvbSUyRmF1dGglMkZ0YXNrcmFiYml0JTJGY2FsbGJhY2s6FHJldHVybl90b19jb3VudFQ%3D--7037a0b8a7044560dd51fc185cbbe700e4920957;
+        path=/; HttpOnly
+      location:
+      - https://taskrabbitdev.com/api/oauth/stored_cards/new?client_id=Wv6xtnl1qzHiYxMUhOXEs48D7Y0zeiBGSKkF5Q99&redirect_uri=http%3A%2F%2Fwww.example.com%2Fauth%2Ftaskrabbit%2Fcallback&response_type=code
+      cache-control:
+      - no-cache
+    body:
+      encoding: US-ASCII
+      string: <html><body>You are being <a href="https://taskrabbitdev.com/api/oauth/stored_cards/new?client_id=Wv6xtnl1qzHiYxMUhOXEs48D7Y0zeiBGSKkF5Q99&amp;redirect_uri=http%3A%2F%2Fwww.example.com%2Fauth%2Ftaskrabbit%2Fcallback&amp;response_type=code">redirected</a>.</body></html>
+    http_version: '1.1'
+  recorded_at: Tue, 04 Sep 2012 06:10:55 GMT
+- request:
+    method: get
+    uri: https://taskrabbitdev.com/api/oauth/stored_cards/new?client_id=Wv6xtnl1qzHiYxMUhOXEs48D7Y0zeiBGSKkF5Q99&redirect_uri=http%3A%2F%2Fwww.example.com%2Fauth%2Ftaskrabbit%2Fcallback&response_type=code
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.2 (KHTML, like
+        Gecko) Chrome/15.0.853.0 Safari/535.2
+      accept-encoding:
+      - gzip,deflate,identity
+      accept-charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      accept-language:
+      - en-us,en;q=0.5
+      cookie:
+      - user_credentials=89dc10f71d88343ae5d910095cf3f7a2560659f8bc9bb63bcd51dbbca766872a4602bb6a8eb5286ad63bc18eb78a744430f54e37fd29c38ad6996bcf6aa51aee%3A%3A30;
+        _remy.refactor_session=BAh7CyIVdXNlcl9jcmVkZW50aWFscyIBgDg5ZGMxMGY3MWQ4ODM0M2FlNWQ5MTAwOTVjZjNmN2EyNTYwNjU5ZjhiYzliYjYzYmNkNTFkYmJjYTc2Njg3MmE0NjAyYmI2YThlYjUyODZhZDYzYmMxOGViNzhhNzQ0NDMwZjU0ZTM3ZmQyOWMzOGFkNjk5NmJjZjZhYTUxYWVlIhh1c2VyX2NyZWRlbnRpYWxzX2lkaSM6D3Nlc3Npb25faWQiJTZiYjU4NTlkYTljMDg5ZTJhZDVlNzMyNTVmM2QzZjA2OhBfY3NyZl90b2tlbiIxMnhNSnYzcncweVhxS01zQTJoVElwYU5KVmRoT1hTTTVuQTlnNTNRUlJVaz06DnJldHVybl90byIBnS9hcGkvYXV0aG9yaXplP3Jlc3BvbnNlX3R5cGU9Y29kZSZjbGllbnRfaWQ9V3Y2eHRubDFxekhpWXhNVWhPWEVzNDhEN1kwemVpQkdTS2tGNVE5OSZyZWRpcmVjdF91cmk9aHR0cCUzQSUyRiUyRnd3dy5leGFtcGxlLmNvbSUyRmF1dGglMkZ0YXNrcmFiYml0JTJGY2FsbGJhY2s6FHJldHVybl90b19jb3VudFQ%3D--7037a0b8a7044560dd51fc185cbbe700e4920957
+      host:
+      - taskrabbitdev.com
+      connection:
+      - keep-alive
+      keep-alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "c2VydmVy":
+      - !binary |-
+        bmdpbngvMS4wLjEx
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        VHVlLCAwNCBTZXAgMjAxMiAwNjoxMDo1NiBHTVQ=
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        dGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04
+      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Y29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+      !binary "c3RhdHVz":
+      - !binary |-
+        MjAwIE9L
+      !binary "ZXRhZw==":
+      - !binary |-
+        IjdhZDAwZWM0Yjg4YTg2MzAzMThiOGE4YjYxM2Y4ZDhmIg==
+      !binary "eC1ydW50aW1l":
+      - !binary |-
+        NDE1
+      !binary "c2V0LWNvb2tpZQ==":
+      - !binary |-
+        X3JlbXkucmVmYWN0b3Jfc2Vzc2lvbj1CQWg3Q2lJVmRYTmxjbDlqY21Wa1pX
+        NTBhV0ZzY3lJQmdEZzVaR014TUdZM01XUTRPRE0wTTJGbE5XUTVNVEF3T1RW
+        alpqTm1OMkV5TlRZd05qVTVaamhpWXpsaVlqWXpZbU5rTlRGa1ltSmpZVGMy
+        TmpnM01tRTBOakF5WW1JMllUaGxZalV5T0RaaFpEWXpZbU14T0dWaU56aGhO
+        elEwTkRNd1pqVTBaVE0zWm1ReU9XTXpPR0ZrTmprNU5tSmpaalpoWVRVeFlX
+        VmxJaGgxYzJWeVgyTnlaV1JsYm5ScFlXeHpYMmxrYVNNNkQzTmxjM05wYjI1
+        ZmFXUWlKVFppWWpVNE5UbGtZVGxqTURnNVpUSmhaRFZsTnpNeU5UVm1NMlF6
+        WmpBMk9oQmZZM055Wmw5MGIydGxiaUl4TW5oTlNuWXpjbmN3ZVZoeFMwMXpR
+        VEpvVkVsd1lVNUtWbVJvVDFoVFRUVnVRVGxuTlROUlVsSlZhejA2RkhKbGRI
+        VnlibDkwYjE5amIzVnVkRVklM0QtLTkwNGI3MzZjZWE0MGZmN2YwMjdmYWY2
+        NWZmMTIyZjNiZTc1NTdjMWM7IHBhdGg9LzsgSHR0cE9ubHk=
+      !binary "Y2FjaGUtY29udHJvbA==":
+      - !binary |-
+        cHJpdmF0ZSwgbWF4LWFnZT0wLCBtdXN0LXJldmFsaWRhdGU=
+      !binary "Y29udGVudC1lbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+        HgAA
+    http_version: !binary |-
+      MS4x
+  recorded_at: Tue, 04 Sep 2012 06:10:56 GMT
+- request:
+    method: post
+    uri: https://taskrabbitdev.com/api/oauth/stored_cards?client_id=Wv6xtnl1qzHiYxMUhOXEs48D7Y0zeiBGSKkF5Q99&redirect_uri=http%3A%2F%2Fwww.example.com%2Fauth%2Ftaskrabbit%2Fcallback&response_type=code
+    body:
+      encoding: UTF-8
+      string: stored_card%5Bunique_id%5D=2012-09-04+02%3A10%3A56+-0400_174602&stored_card%5Bfirst_name%5D=Roger&commit=Save+Credit+Card&stored_card%5Bcard_expires_on%282i%29%5D=1&authenticity_token=2xMJv3rw0yXqKMsA2hTIpaNJVdhOXSM5nA9g53QRRUk%3D&authorize=1&stored_card%5Bmethod%5D=purchase&stored_card%5Bcard_expires_on%281i%29%5D=2013&stored_card%5Bcard_number%5D=4111+1111+1111+1111&stored_card%5Blast_name%5D=Rabbit&stored_card%5Bcvv%5D=123&stored_card%5Bpostal_code%5D=12345
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.2 (KHTML, like
+        Gecko) Chrome/15.0.853.0 Safari/535.2
+      accept-encoding:
+      - gzip,deflate,identity
+      accept-charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      accept-language:
+      - en-us,en;q=0.5
+      cookie:
+      - user_credentials=89dc10f71d88343ae5d910095cf3f7a2560659f8bc9bb63bcd51dbbca766872a4602bb6a8eb5286ad63bc18eb78a744430f54e37fd29c38ad6996bcf6aa51aee%3A%3A30;
+        _remy.refactor_session=BAh7CiIVdXNlcl9jcmVkZW50aWFscyIBgDg5ZGMxMGY3MWQ4ODM0M2FlNWQ5MTAwOTVjZjNmN2EyNTYwNjU5ZjhiYzliYjYzYmNkNTFkYmJjYTc2Njg3MmE0NjAyYmI2YThlYjUyODZhZDYzYmMxOGViNzhhNzQ0NDMwZjU0ZTM3ZmQyOWMzOGFkNjk5NmJjZjZhYTUxYWVlIhh1c2VyX2NyZWRlbnRpYWxzX2lkaSM6D3Nlc3Npb25faWQiJTZiYjU4NTlkYTljMDg5ZTJhZDVlNzMyNTVmM2QzZjA2OhBfY3NyZl90b2tlbiIxMnhNSnYzcncweVhxS01zQTJoVElwYU5KVmRoT1hTTTVuQTlnNTNRUlJVaz06FHJldHVybl90b19jb3VudEY%3D--904b736cea40ff7f027faf65ff122f3be7557c1c
+      host:
+      - taskrabbitdev.com
+      referer:
+      - !ruby/object:URI::HTTPS
+        scheme: https
+        user: 
+        password: 
+        host: taskrabbitdev.com
+        port: 443
+        path: /api/oauth/stored_cards/new
+        query: client_id=Wv6xtnl1qzHiYxMUhOXEs48D7Y0zeiBGSKkF5Q99&redirect_uri=http%3A%2F%2Fwww.example.com%2Fauth%2Ftaskrabbit%2Fcallback&response_type=code
+        opaque: 
+        registry: 
+        fragment: 
+        parser: 
+      content-type:
+      - application/x-www-form-urlencoded
+      content-length:
+      - '464'
+      connection:
+      - keep-alive
+      keep-alive:
+      - 300
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      server:
+      - nginx/1.0.11
+      date:
+      - Tue, 04 Sep 2012 06:10:57 GMT
+      content-type:
+      - text/html; charset=utf-8
+      connection:
+      - keep-alive
+      status:
+      - 302 Found
+      x-runtime:
+      - '561'
+      set-cookie:
+      - _remy.refactor_session=BAh7CiIVdXNlcl9jcmVkZW50aWFscyIBgDg5ZGMxMGY3MWQ4ODM0M2FlNWQ5MTAwOTVjZjNmN2EyNTYwNjU5ZjhiYzliYjYzYmNkNTFkYmJjYTc2Njg3MmE0NjAyYmI2YThlYjUyODZhZDYzYmMxOGViNzhhNzQ0NDMwZjU0ZTM3ZmQyOWMzOGFkNjk5NmJjZjZhYTUxYWVlIhh1c2VyX2NyZWRlbnRpYWxzX2lkaSM6D3Nlc3Npb25faWQiJTZiYjU4NTlkYTljMDg5ZTJhZDVlNzMyNTVmM2QzZjA2OhBfY3NyZl90b2tlbiIxMnhNSnYzcncweVhxS01zQTJoVElwYU5KVmRoT1hTTTVuQTlnNTNRUlJVaz06FHJldHVybl90b19jb3VudEY%3D--904b736cea40ff7f027faf65ff122f3be7557c1c;
+        path=/; HttpOnly
+      content-length:
+      - '139'
+      location:
+      - http://www.example.com/auth/taskrabbit/callback?code=kTQJx0fFeJjzYxdRz7uQ
+      cache-control:
+      - no-cache
+    body:
+      encoding: US-ASCII
+      string: <html><body>You are being <a href="http://www.example.com/auth/taskrabbit/callback?code=kTQJx0fFeJjzYxdRz7uQ">redirected</a>.</body></html>
+    http_version: '1.1'
+  recorded_at: Tue, 04 Sep 2012 06:10:57 GMT
+- request:
+    method: post
+    uri: http://taskrabbitdev.com/api/oauth/token
+    body:
+      encoding: US-ASCII
+      string: grant_type=authorization_code&code=kTQJx0fFeJjzYxdRz7uQ&client_id=Wv6xtnl1qzHiYxMUhOXEs48D7Y0zeiBGSKkF5Q99&client_secret=V6Ehncc5rpkHUIBkiFwPwof5wErNF0mXEeJ29nZX&redirect_uri=http%3A%2F%2Fwww.example.com%2Fauth%2Ftaskrabbit%2Fcallback
+    headers:
+      content-type:
+      - application/x-www-form-urlencoded
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.11
+      date:
+      - Tue, 04 Sep 2012 06:10:57 GMT
+      content-type:
+      - application/json; charset=utf-8
+      connection:
+      - close
+      status:
+      - 200 OK
+      etag:
+      - ! '"972b4f77eabde406a8daebd3dbb64d31"'
+      x-runtime:
+      - '388'
+      content-length:
+      - '59'
+      set-cookie:
+      - user_credentials=; path=/; expires=Thu, 01-Jan-1970 00:00:00 GMT
+      - _remy.refactor_session=BAh7BjoPc2Vzc2lvbl9pZCIlODc4YzBmNmY2NDBhZTgxMGYzYWI2MTRlYmUzMWRlOWY%3D--ff4be37aa91c63aa164beb23e67584b2799fd318;
+        path=/; HttpOnly
+      cache-control:
+      - private, max-age=0, must-revalidate
+    body:
+      encoding: US-ASCII
+      string: ! '{"access_token":"J3vwzAJ4TQlB27Wy0uIBN6v4MGLB4KV3Yn4jq0WP"}'
+    http_version: '1.1'
+  recorded_at: Tue, 04 Sep 2012 06:10:57 GMT
+- request:
+    method: get
+    uri: http://taskrabbitdev.com/api/v1/account
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization:
+      - OAuth J3vwzAJ4TQlB27Wy0uIBN6v4MGLB4KV3Yn4jq0WP
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.11
+      date:
+      - Tue, 04 Sep 2012 06:10:58 GMT
+      content-type:
+      - application/json; charset=utf-8
+      connection:
+      - close
+      status:
+      - 200 OK
+      etag:
+      - ! '"5e7d632093fd5d3061ee56b05c998183"'
+      x-runtime:
+      - '396'
+      content-length:
+      - '595'
+      cache-control:
+      - private, max-age=0, must-revalidate
+    body:
+      encoding: US-ASCII
+      string: ! '{"counts":{"ongoing_tasks":0,"posted_tasks":0,"active_tasks":0},"locations":{"items":[],"links":{"get":"/api/v1/users/30/locations"}},"email":"roger@example.com","links":{"get":"/api/v1/users/30","avatar_url":"http://s-app1.taskrabbit.com/images/default_avatars/poster_thumb.png"},"zip_code":"12345","mobile_phone":"012-345-6789","display_name":"Roger
+        R.","tasks":{"items":[],"links":{"get":"/api/v1/users/30/tasks","last":"/api/v1/users/30/tasks?page=1","first":"/api/v1/users/30/tasks?page=1"}},"short_name":"Roger","full_name":"Roger
+        Rabbit","last_name":"Rabbit","id":30,"first_name":"Roger"}'
+    http_version: '1.1'
+  recorded_at: Tue, 04 Sep 2012 06:10:58 GMT
+recorded_with: VCR 2.2.4

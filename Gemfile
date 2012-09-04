@@ -20,15 +20,20 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
+
 group :test, :development do
   gem "rspec-rails"
   gem "factory_girl_rails"
 end
-group :test do
-  gem "capybara"
-  gem "guard-rspec"
-end
 
+group :test do
+  gem 'capybara'
+  gem 'guard-rspec'
+  gem 'vcr'
+  gem 'fakeweb'
+  gem 'capybara-mechanize'
+  gem 'launchy'
+end
 
 gem 'jquery-rails'
 
