@@ -1,9 +1,10 @@
 # http://railscasts.com/episodes/291-testing-with-vcr
 
-VCR.config do |c|
+VCR.configure do |c|
   c.cassette_library_dir = Rails.root.join("spec", "vcr")
   c.stub_with :fakeweb
-  c.filter_sensitive_data('<WSDL>') { "http://www.webservicex.net:80/uszip.asmx?WSDL" }
+  c.filter_sensitive_data('<TR_SECRET>') { TASKRABBIT['secret'] }
+  c.filter_sensitive_data('<TR_KEY>') { TASKRABBIT['key'] }
 end
 
 RSpec.configure do |c|

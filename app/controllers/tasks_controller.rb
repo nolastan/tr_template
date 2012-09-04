@@ -48,6 +48,7 @@ class TasksController < ApplicationController
       @task.remote_path = remote_task.links["get"]
       @task.state       = remote_task.state
       @task.save
+      flash[:notice] = "Task Posted"
     else
       flash[:error] = remote_task.error || "Error posting to TaskRabbit."
     end

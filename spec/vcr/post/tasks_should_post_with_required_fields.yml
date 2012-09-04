@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://taskrabbitdev.com/api/v1/tasks?
+    body:
+      encoding: US-ASCII
+      string: task[description]=&task[private_description]=&task[private_runner]=false&task[virtual]=false&task[name]=House%20Chores&task[named_price]=50&task[city_id]=4&task[cost_in_cents]=&task[assignment_type]=
+    headers:
+      x-client-application:
+      - <TR_SECRET>
+      authorization:
+      - OAuth QdC8G50zPyIztn2W4ksSg5OeJKANx31FQVc7BEIa
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.11
+      date:
+      - Tue, 04 Sep 2012 18:48:44 GMT
+      content-type:
+      - application/json; charset=utf-8
+      connection:
+      - close
+      status:
+      - 200 OK
+      etag:
+      - ! '"3e9279866ca1515a57824f524a7d494c"'
+      x-runtime:
+      - '833'
+      content-length:
+      - '1013'
+      set-cookie:
+      - current_geo=1053; path=/; expires=Sun, 04-Nov-2012 19:48:43 GMT
+      cache-control:
+      - private, max-age=0, must-revalidate
+    body:
+      encoding: US-ASCII
+      string: ! '{"name":"House Chores","state_changed_at":1346784523,"assignment_type":"auto","private_runner":false,"city":{"name":"New
+        York City","links":{"get":"/api/v1/cities/4"},"lat":40.714353,"id":1060,"lng":-74.005973},"complete_by_time":1346958000,"runner_fee":0,"links":{"get":"/api/v1/tasks/29","html":"http://s-app1.taskrabbit.com/tasks/house-chores","authenticated":"https://s-app1.taskrabbit.com/go/e23b4ba11cdc9a082f213297186329790c19b2e62db3a6ba39f62bdaaf5775fc640324ef1948c728c552da1131ae15f8d3e2","delete":"/api/v1/tasks/29","put":"/api/v1/tasks/29"},"state":"opened","runners":{"items":[]},"assign_by_time":1346871600,"description_properties":[{"key":"description","title":"Description","value":""},{"key":"private_description","title":"Private
+        description","value":""},{"key":"assign_by_time","title":"If unassigned, Task
+        will expire on","value":1346871600},{"key":"complete_by_time","title":"Task
+        should be completed by","value":1346958000}],"named_price":50,"state_label":"posted","id":29,"charge_price":50}'
+    http_version: '1.1'
+  recorded_at: Tue, 04 Sep 2012 18:48:44 GMT
+recorded_with: VCR 2.2.4
