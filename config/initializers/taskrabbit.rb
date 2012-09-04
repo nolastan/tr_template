@@ -1,4 +1,4 @@
-TASKRABBIT = YAML.load_file("#{Rails.root}/config/taskrabbit.yml") unless ENV['TASKRABBIT_KEY']
+TASKRABBIT = YAML.load_file("#{Rails.root}/config/taskrabbit.yml")[Rails.env] unless ENV['TASKRABBIT_KEY']
 
 Taskrabbit.configure do |config|
   config.api_key       = ENV['TASKRABBIT_KEY'] || TASKRABBIT['key']
