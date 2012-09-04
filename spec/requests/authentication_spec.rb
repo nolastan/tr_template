@@ -1,8 +1,11 @@
 require "spec_helper"
 
 describe "Authentication" do
-  it "login a new user", :vcr do
+  before :each do
     Capybara.current_driver = :mechanize
+  end
+
+  it "login a new user", :vcr do
     visit root_path
     click_on "Login"
 
@@ -22,5 +25,18 @@ describe "Authentication" do
     click_on "stored_card_submit"
 
     current_url.should == root_url
+    page.should have_content "Roger R."
+  end
+
+  it "login existing user", :vcr do
+    visit root_path
+    click_on "Login"
+    find(:css, "#switch-login a").click
+    fill_in "user_session_email", :with => "roger@example.com"
+    fill_in "user_session_password", :with => "secret"
+    click_on "user_session_submit"
+
+    current_url.should == root_url
+    page.should have_content "Roger R."
   end
 end
